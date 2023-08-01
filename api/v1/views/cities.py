@@ -17,7 +17,7 @@ def list_cities(state_id):
     if state_obj == []:
         abort(404)
     list_cities = [obj.to_dict() for obj in storage.all("City").values()
-            if obj.id == state_id]
+                   if state_id == obj.state_id]
     return jsonify(list_cities)
 
 
