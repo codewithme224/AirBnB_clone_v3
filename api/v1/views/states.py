@@ -57,5 +57,6 @@ def states_with_id(state_id=None):
         state_obj.bm_update(req_json)
         return jsonify(state_obj.to_json())
 
+
 if __name__ == "__main__":
     pass
